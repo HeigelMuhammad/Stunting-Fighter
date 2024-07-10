@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://bgt3rxqwge816"]
+
+[ext_resource type="Script" path="res://9 - 11 bulan/bayi9-11.6.gd" id="1_2qdsa"]
+[ext_resource type="Texture2D" uid="uid://cf1de0hkgisdv" path="res://asset 9-11/bg biru.png" id="1_qbc5o"]
+[ext_resource type="Texture2D" uid="uid://o1x1y311f3tg" path="res://2-5 tahun/asset 2-5 tahun/informasi gizi.png" id="2_bhmem"]
+[ext_resource type="Texture2D" uid="uid://dqao60ybp2vx3" path="res://asset 9-11/infoberas.png" id="3_cysu1"]
+[ext_resource type="Texture2D" uid="uid://bvyqv5kua461j" path="res://asset 9-11/Group 85.png" id="4_0bvip"]
+[ext_resource type="Texture2D" uid="uid://camm7w3c3rxkw" path="res://asset 9-11/Group 87.png" id="5_gc8g8"]
+[ext_resource type="Texture2D" uid="uid://cqs5tyrkye8ga" path="res://asset 9-11/info tempe.png" id="5_ut552"]
+[ext_resource type="Texture2D" uid="uid://d1q1rtucwqhb5" path="res://asset 9-11/Group 86.png" id="7_bysup"]
+[ext_resource type="Texture2D" uid="uid://cciq2ppw7geuj" path="res://asset 8 - 11 bulan/button.png" id="9_uavh8"]
+[ext_resource type="AudioStream" uid="uid://dtrimstj1tkhw" path="res://Voice 9-11 bulan/Informasi gizi ( 11 - 23 bulan).mp3" id="10_p62r8"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2qdsa")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(269.25, 479.5)
+scale = Vector2(1.38804, 1.13028)
+texture = ExtResource("1_qbc5o")
+
+[node name="info gizi" type="Sprite2D" parent="."]
+position = Vector2(264, 45)
+texture = ExtResource("2_bhmem")
+
+[node name="infoberas" type="Sprite2D" parent="."]
+position = Vector2(277, 178.937)
+scale = Vector2(0.44, 0.417184)
+texture = ExtResource("3_cysu1")
+
+[node name="infoikan" type="Sprite2D" parent="."]
+position = Vector2(273, 345)
+scale = Vector2(0.438751, 0.431395)
+texture = ExtResource("4_0bvip")
+
+[node name="infowortel" type="Sprite2D" parent="."]
+position = Vector2(273, 638)
+scale = Vector2(0.438751, 0.431395)
+texture = ExtResource("5_gc8g8")
+
+[node name="infotempe" type="Sprite2D" parent="."]
+position = Vector2(276.5, 476)
+scale = Vector2(0.437273, 0.421836)
+texture = ExtResource("5_ut552")
+
+[node name="infominyak" type="Sprite2D" parent="."]
+position = Vector2(276.5, 789)
+scale = Vector2(0.437273, 0.421836)
+texture = ExtResource("7_bysup")
+
+[node name="next" type="TouchScreenButton" parent="."]
+
+[node name="next" type="Button" parent="next"]
+offset_left = 212.0
+offset_top = 835.0
+offset_right = 309.0
+offset_bottom = 938.0
+icon = ExtResource("9_uavh8")
+flat = true
+expand_icon = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_p62r8")
+autoplay = true
+
+[connection signal="pressed" from="next/next" to="." method="_on_next_pressed"]

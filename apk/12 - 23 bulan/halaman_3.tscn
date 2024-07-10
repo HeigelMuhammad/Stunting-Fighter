@@ -1,0 +1,147 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtsmvxq7da5d6"]
+
+[ext_resource type="Texture2D" uid="uid://de0636a3s6vnh" path="res://asset 8 - 11 bulan/bg biru.png" id="1_t0mlx"]
+[ext_resource type="Script" path="res://12 - 23 bulan/halaman_3.gd" id="1_u47c8"]
+[ext_resource type="Texture2D" uid="uid://mqc504oei5ti" path="res://scene/asset/button.png" id="2_i6y1x"]
+[ext_resource type="Texture2D" uid="uid://c2ywd5owb2dyr" path="res://asset 8 - 11 bulan/4kulkas.png" id="3_th0kv"]
+[ext_resource type="Texture2D" uid="uid://c00u242ul8ckd" path="res://12 - 23 bulan/ayam 1123.png" id="4_jyi45"]
+[ext_resource type="Texture2D" uid="uid://c274by23g38lj" path="res://12 - 23 bulan/nasi 1123.png" id="5_ibgcb"]
+[ext_resource type="Texture2D" uid="uid://dknrjyyk3mnmf" path="res://12 - 23 bulan/sayur 1123.png" id="6_4gpsd"]
+[ext_resource type="Texture2D" uid="uid://o64yikq2mmcy" path="res://6 - 8 bulann/asset makanan bergizi dan non/1 daging kaleng.png" id="8_rfhuw"]
+[ext_resource type="Texture2D" uid="uid://f1vtofc3x4sq" path="res://6 bulan/halaman 2/Ceklist-benar.png" id="8_taoh2"]
+[ext_resource type="Texture2D" uid="uid://urb0al6wld6i" path="res://6 bulan/halaman 2/Salah.png" id="9_60gb3"]
+[ext_resource type="Texture2D" uid="uid://dr8tdecc8jumm" path="res://6 - 8 bulann/asset makanan bergizi dan non/1 mie instan.png" id="9_efhgw"]
+
+[node name="halaman_3" type="Node2D"]
+script = ExtResource("1_u47c8")
+
+[node name="BgBiru" type="Sprite2D" parent="."]
+position = Vector2(269.25, 478)
+scale = Vector2(1.35242, 1.11972)
+texture = ExtResource("1_t0mlx")
+
+[node name="4Kulkas" type="Sprite2D" parent="."]
+position = Vector2(264.25, 467.75)
+scale = Vector2(1.46331, 1.40963)
+texture = ExtResource("3_th0kv")
+
+[node name="next to food" type="TouchScreenButton" parent="."]
+position = Vector2(281, 889)
+
+[node name="next to food" type="Button" parent="next to food"]
+visible = false
+offset_left = -53.0
+offset_top = -68.0
+offset_right = 41.0
+offset_bottom = 53.0
+icon = ExtResource("2_i6y1x")
+flat = true
+expand_icon = true
+
+[node name="ayam" type="TouchScreenButton" parent="."]
+position = Vector2(189, 191)
+
+[node name="ayam" type="Button" parent="ayam"]
+offset_left = -84.0
+offset_top = -78.0
+offset_right = 1014.0
+offset_bottom = 1032.0
+scale = Vector2(0.136574, 0.11713)
+icon = ExtResource("4_jyi45")
+flat = true
+expand_icon = true
+
+[node name="sayur" type="TouchScreenButton" parent="."]
+position = Vector2(330, 328)
+
+[node name="sayur" type="Button" parent="sayur"]
+offset_left = -86.0
+offset_top = -107.0
+offset_right = 922.0
+offset_bottom = 931.0
+scale = Vector2(0.165741, 0.156019)
+icon = ExtResource("6_4gpsd")
+flat = true
+expand_icon = true
+
+[node name="nasi" type="TouchScreenButton" parent="."]
+position = Vector2(176, 421)
+
+[node name="nasi" type="Button" parent="nasi"]
+offset_left = -69.0
+offset_top = -79.0
+offset_right = 1019.0
+offset_bottom = 1009.0
+scale = Vector2(0.134954, 0.134259)
+icon = ExtResource("5_ibgcb")
+flat = true
+expand_icon = true
+
+[node name="daging kaleng" type="TouchScreenButton" parent="."]
+position = Vector2(176, 421)
+
+[node name="daging kaleng" type="Button" parent="daging kaleng"]
+offset_left = -44.0
+offset_top = -176.0
+offset_right = 918.0
+offset_bottom = 815.0
+scale = Vector2(0.134954, 0.134259)
+icon = ExtResource("8_rfhuw")
+flat = true
+expand_icon = true
+
+[node name="Mie" type="TouchScreenButton" parent="."]
+position = Vector2(176, 421)
+
+[node name="Mie" type="Button" parent="Mie"]
+offset_left = 88.0
+offset_top = -75.0
+offset_right = 1176.0
+offset_bottom = 1013.0
+scale = Vector2(0.134954, 0.134259)
+icon = ExtResource("9_efhgw")
+flat = true
+expand_icon = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="benar1" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(192, 191)
+scale = Vector2(0.315625, 0.335052)
+texture = ExtResource("8_taoh2")
+
+[node name="benar2" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(344, 310)
+scale = Vector2(0.315625, 0.335052)
+texture = ExtResource("8_taoh2")
+
+[node name="benar3" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(186, 420)
+scale = Vector2(0.315625, 0.335052)
+texture = ExtResource("8_taoh2")
+
+[node name="salah1" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(193, 310)
+scale = Vector2(0.372419, 0.374595)
+texture = ExtResource("9_60gb3")
+
+[node name="salah2" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(338, 435)
+scale = Vector2(0.372419, 0.374595)
+texture = ExtResource("9_60gb3")
+
+[connection signal="pressed" from="next to food/next to food" to="." method="_on_next_to_food_pressed"]
+[connection signal="pressed" from="ayam/ayam" to="." method="_on_ayam_pressed"]
+[connection signal="pressed" from="sayur/sayur" to="." method="_on_sayur_pressed"]
+[connection signal="pressed" from="nasi/nasi" to="." method="_on_nasi_pressed"]
+[connection signal="pressed" from="daging kaleng/daging kaleng" to="." method="_on_daging_kaleng_pressed"]
+[connection signal="pressed" from="Mie/Mie" to="." method="_on_mie_pressed"]

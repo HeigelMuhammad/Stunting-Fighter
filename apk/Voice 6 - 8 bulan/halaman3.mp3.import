@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djuu7q6ss4gi1"
+path="res://.godot/imported/halaman3.mp3-75ffbe58bac3c85b07a7cad3b3afecab.mp3str"
+
+[deps]
+
+source_file="res://Voice 6 - 8 bulan/halaman3.mp3"
+dest_files=["res://.godot/imported/halaman3.mp3-75ffbe58bac3c85b07a7cad3b3afecab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

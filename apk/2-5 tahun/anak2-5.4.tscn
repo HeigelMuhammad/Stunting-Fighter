@@ -1,0 +1,140 @@
+[gd_scene load_steps=14 format=3 uid="uid://b8dk4sqad3rac"]
+
+[ext_resource type="Texture2D" uid="uid://chn3d1tof2vpu" path="res://2-5 tahun/asset 2-5 tahun/bg 1.png" id="1_qurfs"]
+[ext_resource type="Script" path="res://2-5 tahun/anak2-5.4.gd" id="1_rye13"]
+[ext_resource type="Texture2D" uid="uid://bxomu7sy6onij" path="res://2-5 tahun/asset 2-5 tahun/meja.png" id="2_sh8r8"]
+[ext_resource type="Texture2D" uid="uid://btknx1hw0ew5o" path="res://2-5 tahun/asset 2-5 tahun/jam 2.png" id="3_qtcuj"]
+[ext_resource type="Texture2D" uid="uid://dmyxs6mmadv8q" path="res://2-5 tahun/asset makanan tidak sehat/1 sosis.png" id="7_0dn8k"]
+[ext_resource type="Texture2D" uid="uid://d3p6sf0x5gb71" path="res://2-5 tahun/asset 2-5 tahun/soup.png" id="7_lrsvw"]
+[ext_resource type="Texture2D" uid="uid://dns03yqnius23" path="res://2-5 tahun/asset makanan tidak sehat/1 mie instan.png" id="8_uvswt"]
+[ext_resource type="Texture2D" uid="uid://csccbrliy315j" path="res://2-5 tahun/asset makanan tidak sehat/1 ikan kaleng.png" id="9_tlbwc"]
+[ext_resource type="Script" path="res://2-5 tahun/TouchScreenButton5.gd" id="9_tsich"]
+[ext_resource type="Texture2D" uid="uid://f1vtofc3x4sq" path="res://6 bulan/halaman 2/Ceklist-benar.png" id="11_7vfee"]
+[ext_resource type="Texture2D" uid="uid://urb0al6wld6i" path="res://6 bulan/halaman 2/Salah.png" id="12_edyvj"]
+[ext_resource type="Texture2D" uid="uid://c7tdosr0peo02" path="res://6 bulan/halaman 2/reload.png" id="14_orich"]
+[ext_resource type="Texture2D" uid="uid://cw58mq70qo36b" path="res://6 bulan/button.png" id="15_v6kh0"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rye13")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(269.25, 479)
+scale = Vector2(1.36768, 1.12207)
+texture = ExtResource("1_qurfs")
+
+[node name="meja" type="Sprite2D" parent="."]
+position = Vector2(269, 443)
+scale = Vector2(1.06743, 1.03805)
+texture = ExtResource("2_sh8r8")
+
+[node name="jam" type="Sprite2D" parent="."]
+position = Vector2(267, 788)
+texture = ExtResource("3_qtcuj")
+
+[node name="TouchScreenSoup" type="TouchScreenButton" parent="."]
+position = Vector2(336, 545)
+script = ExtResource("9_tsich")
+
+[node name="soup" type="Button" parent="TouchScreenSoup"]
+offset_left = -62.0
+offset_top = -78.0
+offset_right = 78.0
+offset_bottom = 94.0
+icon = ExtResource("7_lrsvw")
+flat = true
+expand_icon = true
+
+[node name="TouchScreenSosis" type="TouchScreenButton" parent="."]
+position = Vector2(360, 304)
+script = ExtResource("9_tsich")
+
+[node name="sosis" type="Button" parent="TouchScreenSosis"]
+offset_left = -93.0
+offset_top = -97.0
+offset_right = 59.0
+offset_bottom = 79.0
+icon = ExtResource("7_0dn8k")
+flat = true
+expand_icon = true
+
+[node name="TouchScreenMie" type="TouchScreenButton" parent="."]
+position = Vector2(240, 410)
+script = ExtResource("9_tsich")
+
+[node name="mie" type="Button" parent="TouchScreenMie"]
+offset_left = -88.0
+offset_top = -77.0
+offset_right = 103.0
+offset_bottom = 98.0
+icon = ExtResource("8_uvswt")
+flat = true
+expand_icon = true
+
+[node name="TouchScreenIkan" type="TouchScreenButton" parent="."]
+position = Vector2(213, 666)
+rotation = 1.8326
+script = ExtResource("9_tsich")
+
+[node name="ikan" type="Button" parent="TouchScreenIkan"]
+offset_left = -95.3814
+offset_top = 69.039
+offset_right = 54.6186
+offset_bottom = 266.039
+rotation = -1.5708
+icon = ExtResource("9_tlbwc")
+flat = true
+expand_icon = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 286.935
+offset_top = 437.754
+offset_right = 326.935
+offset_bottom = 477.754
+
+[node name="benar" type="Sprite2D" parent="Control"]
+visible = false
+scale = Vector2(0.837905, 0.853927)
+texture = ExtResource("11_7vfee")
+
+[node name="salah" type="Sprite2D" parent="Control"]
+visible = false
+scale = Vector2(0.837905, 0.853927)
+texture = ExtResource("12_edyvj")
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="Control"]
+position = Vector2(-286.935, -437.754)
+
+[node name="replay" type="Button" parent="Control/TouchScreenButton7"]
+visible = false
+offset_left = 181.0
+offset_top = 781.0
+offset_right = 355.0
+offset_bottom = 972.0
+icon = ExtResource("14_orich")
+flat = true
+expand_icon = true
+
+[node name="lanjut" type="Button" parent="Control/TouchScreenButton7"]
+visible = false
+anchors_preset = -1
+anchor_left = 2.277
+anchor_top = -3.869
+anchor_right = 2.277
+anchor_bottom = -3.869
+offset_left = 208.0
+offset_top = 815.0
+offset_right = 333.0
+offset_bottom = 928.0
+keep_pressed_outside = true
+icon = ExtResource("15_v6kh0")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="TouchScreenSoup/soup" to="." method="_on_soup_pressed"]
+[connection signal="pressed" from="TouchScreenSosis/sosis" to="." method="_on_sosis_pressed"]
+[connection signal="pressed" from="TouchScreenMie/mie" to="." method="_on_mie_pressed"]
+[connection signal="pressed" from="TouchScreenIkan/ikan" to="." method="_on_ikan_pressed"]
+[connection signal="pressed" from="Control/TouchScreenButton7/replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Control/TouchScreenButton7/lanjut" to="." method="_on_lanjut_pressed"]

@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://cwfu2broho7gy"]
+
+[ext_resource type="Script" path="res://12 - 23 bulan/halaman_2.gd" id="1_3hdmm"]
+[ext_resource type="Texture2D" uid="uid://cfgcm3vsfcm74" path="res://asset 8 - 11 bulan/2bg bayi.png" id="2_vjqbp"]
+[ext_resource type="Texture2D" uid="uid://cy2j1m6ovxju1" path="res://12 - 23 bulan/bayi 11 - 23 bulan.png" id="3_5a8tf"]
+[ext_resource type="Texture2D" uid="uid://mqc504oei5ti" path="res://scene/asset/button.png" id="4_6wgf8"]
+[ext_resource type="Texture2D" uid="uid://sj34brqvdke4" path="res://Frame Animation/9 - 11 Bulan/1.png" id="5_gg12c"]
+[ext_resource type="Texture2D" uid="uid://b2c5dvq6b3y2a" path="res://Frame Animation/9 - 11 Bulan/2.png" id="6_v7583"]
+[ext_resource type="Texture2D" uid="uid://ghvxmd1wiybe" path="res://Frame Animation/9 - 11 Bulan/3.png" id="7_4663b"]
+[ext_resource type="Texture2D" uid="uid://c7debvx4l82hm" path="res://Frame Animation/9 - 11 Bulan/4.png" id="8_60nnx"]
+[ext_resource type="Texture2D" uid="uid://7g55xvpk73ep" path="res://Frame Animation/9 - 11 Bulan/5.png" id="9_rvjov"]
+[ext_resource type="Texture2D" uid="uid://dbkvuhibts4i7" path="res://Frame Animation/9 - 11 Bulan/6.png" id="10_a77wg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2xjc8"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("5_gg12c")
+}, {
+"duration": 5.0,
+"texture": ExtResource("6_v7583")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_4663b")
+}, {
+"duration": 5.0,
+"texture": ExtResource("8_60nnx")
+}, {
+"duration": 5.0,
+"texture": ExtResource("9_rvjov")
+}, {
+"duration": 5.0,
+"texture": ExtResource("10_a77wg")
+}],
+"loop": true,
+"name": &"11 - 23 Bulan",
+"speed": 6.0
+}]
+
+[node name="halaman_2" type="Node2D"]
+script = ExtResource("1_3hdmm")
+
+[node name="BgBayi" type="Sprite2D" parent="."]
+position = Vector2(269.5, 477.75)
+scale = Vector2(0.49537, 0.499219)
+texture = ExtResource("2_vjqbp")
+
+[node name="Bayi11-23Bulan" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(299, 654)
+scale = Vector2(0.619907, 0.563542)
+texture = ExtResource("3_5a8tf")
+
+[node name="next to kulkas" type="TouchScreenButton" parent="."]
+
+[node name="next to kulkas" type="Button" parent="next to kulkas"]
+offset_left = 434.0
+offset_top = 823.0
+offset_right = 528.0
+offset_bottom = 944.0
+icon = ExtResource("4_6wgf8")
+flat = true
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(298, 726)
+scale = Vector2(0.455714, 0.442429)
+sprite_frames = SubResource("SpriteFrames_2xjc8")
+animation = &"11 - 23 Bulan"
+autoplay = "11 - 23 Bulan"
+frame_progress = 0.945995
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="pressed" from="next to kulkas/next to kulkas" to="." method="_on_next_to_kulkas_pressed"]

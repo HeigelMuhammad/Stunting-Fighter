@@ -1,0 +1,175 @@
+[gd_scene load_steps=15 format=3 uid="uid://yffosweh8or6"]
+
+[ext_resource type="Script" path="res://6 - 8 bulann/halaman4.gd" id="1_fuq3p"]
+[ext_resource type="Texture2D" uid="uid://de0636a3s6vnh" path="res://asset 8 - 11 bulan/bg biru.png" id="1_p1678"]
+[ext_resource type="Texture2D" uid="uid://c2ywd5owb2dyr" path="res://asset 8 - 11 bulan/4kulkas.png" id="2_krrid"]
+[ext_resource type="Texture2D" uid="uid://dxp1au4t84k2i" path="res://asset 8 - 11 bulan/santan.png" id="4_1dyev"]
+[ext_resource type="Texture2D" uid="uid://cenxgijr7tjjh" path="res://6 - 8 bulann/asset makanan bergizi dan non/1 msg.png" id="4_cgq25"]
+[ext_resource type="Texture2D" uid="uid://d4fbsfukcxe6t" path="res://asset 8 - 11 bulan/Beras.png" id="5_w0met"]
+[ext_resource type="Texture2D" uid="uid://dlpoy3qni0tmm" path="res://asset 8 - 11 bulan/wortel.png" id="8_07ejr"]
+[ext_resource type="Texture2D" uid="uid://dr8tdecc8jumm" path="res://6 - 8 bulann/asset makanan bergizi dan non/1 mie instan.png" id="9_bra2r"]
+[ext_resource type="Texture2D" uid="uid://mqc504oei5ti" path="res://scene/asset/button.png" id="9_w3ps4"]
+[ext_resource type="Texture2D" uid="uid://b6e6wbc5xyuvn" path="res://6 - 8 bulann/asset makanan bergizi dan non/1 ikan kaleng.png" id="11_ew0ut"]
+[ext_resource type="Texture2D" uid="uid://f1vtofc3x4sq" path="res://6 bulan/halaman 2/Ceklist-benar.png" id="11_la0ux"]
+[ext_resource type="Texture2D" uid="uid://o64yikq2mmcy" path="res://6 - 8 bulann/asset makanan bergizi dan non/1 daging kaleng.png" id="11_opnv3"]
+[ext_resource type="Texture2D" uid="uid://urb0al6wld6i" path="res://6 bulan/halaman 2/Salah.png" id="12_k3l4s"]
+[ext_resource type="Script" path="res://6 - 8 bulann/next to masak.gd" id="13_eyuma"]
+
+[node name="halaman4" type="Node2D"]
+script = ExtResource("1_fuq3p")
+
+[node name="BgBiru" type="Sprite2D" parent="."]
+position = Vector2(272.875, 479.25)
+scale = Vector2(1.40013, 1.14261)
+texture = ExtResource("1_p1678")
+
+[node name="Kulkas" type="Sprite2D" parent="."]
+position = Vector2(278, 496)
+scale = Vector2(1.44283, 1.42568)
+texture = ExtResource("2_krrid")
+
+[node name="wortel" type="TouchScreenButton" parent="."]
+
+[node name="Wortel" type="Button" parent="wortel"]
+offset_left = 292.0
+offset_top = 298.0
+offset_right = 433.0
+offset_bottom = 413.0
+icon = ExtResource("8_07ejr")
+flat = true
+
+[node name="msg" type="TouchScreenButton" parent="."]
+
+[node name="msg" type="Button" parent="msg"]
+offset_left = 155.0
+offset_top = 284.0
+offset_right = 263.0
+offset_bottom = 398.0
+icon = ExtResource("4_cgq25")
+flat = true
+expand_icon = true
+
+[node name="beras" type="TouchScreenButton" parent="."]
+
+[node name="Beras" type="Button" parent="beras"]
+offset_left = 190.0
+offset_top = 497.0
+offset_right = 345.0
+offset_bottom = 643.0
+icon = ExtResource("5_w0met")
+flat = true
+
+[node name="santan" type="TouchScreenButton" parent="."]
+
+[node name="santan" type="Button" parent="santan"]
+offset_left = 302.0
+offset_top = 163.0
+offset_right = 1390.0
+offset_bottom = 1251.0
+scale = Vector2(0.109259, 0.111343)
+icon = ExtResource("4_1dyev")
+flat = true
+
+[node name="mie" type="TouchScreenButton" parent="."]
+
+[node name="mie" type="Button" parent="mie"]
+offset_left = 292.0
+offset_top = 396.0
+offset_right = 1380.0
+offset_bottom = 1484.0
+scale = Vector2(0.124074, 0.114352)
+icon = ExtResource("9_bra2r")
+flat = true
+
+[node name="daging kaleng" type="TouchScreenButton" parent="."]
+
+[node name="daging kaleng" type="Button" parent="daging kaleng"]
+offset_left = 141.0
+offset_top = 415.0
+offset_right = 1011.0
+offset_bottom = 1255.0
+scale = Vector2(0.124074, 0.114352)
+icon = ExtResource("11_opnv3")
+flat = true
+expand_icon = true
+
+[node name="sarden" type="TouchScreenButton" parent="."]
+
+[node name="sarden" type="Button" parent="sarden"]
+offset_left = 141.0
+offset_top = 151.0
+offset_right = 1318.0
+offset_bottom = 1279.0
+scale = Vector2(0.124074, 0.114352)
+icon = ExtResource("11_ew0ut")
+flat = true
+
+[node name="next to masak" type="TouchScreenButton" parent="."]
+script = ExtResource("13_eyuma")
+
+[node name="next to masak2" type="Button" parent="next to masak"]
+visible = false
+offset_left = 437.0
+offset_top = 832.0
+offset_right = 531.0
+offset_bottom = 953.0
+icon = ExtResource("9_w3ps4")
+flat = true
+expand_icon = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="benar1" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(368, 210)
+scale = Vector2(0.315625, 0.335052)
+texture = ExtResource("11_la0ux")
+
+[node name="benar2" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(376, 346)
+scale = Vector2(0.315625, 0.335052)
+texture = ExtResource("11_la0ux")
+
+[node name="benar3" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(283, 556)
+scale = Vector2(0.315625, 0.335052)
+texture = ExtResource("11_la0ux")
+
+[node name="salah1" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(210, 215)
+scale = Vector2(0.372419, 0.374595)
+texture = ExtResource("12_k3l4s")
+
+[node name="salah2" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(207, 342)
+scale = Vector2(0.372419, 0.374595)
+texture = ExtResource("12_k3l4s")
+
+[node name="salah3" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(202, 464)
+scale = Vector2(0.372419, 0.374595)
+texture = ExtResource("12_k3l4s")
+
+[node name="salah4" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(366, 460)
+scale = Vector2(0.372419, 0.374595)
+texture = ExtResource("12_k3l4s")
+
+[connection signal="pressed" from="wortel/Wortel" to="." method="_on_wortel_pressed"]
+[connection signal="pressed" from="msg/msg" to="." method="_on_msg_pressed"]
+[connection signal="pressed" from="beras/Beras" to="." method="_on_beras_pressed"]
+[connection signal="pressed" from="santan/santan" to="." method="_on_santan_pressed"]
+[connection signal="pressed" from="mie/mie" to="." method="_on_mie_pressed"]
+[connection signal="pressed" from="daging kaleng/daging kaleng" to="." method="_on_daging_kaleng_pressed"]
+[connection signal="pressed" from="sarden/sarden" to="." method="_on_sarden_pressed"]
+[connection signal="pressed" from="next to masak/next to masak2" to="." method="_on_next_to_masak_2_pressed"]

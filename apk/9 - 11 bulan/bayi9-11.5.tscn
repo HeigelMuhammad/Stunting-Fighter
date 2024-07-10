@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bo2x5uddrksr"]
+
+[ext_resource type="Script" path="res://9 - 11 bulan/bayi9-11.5.gd" id="1_aaqx6"]
+[ext_resource type="Texture2D" uid="uid://cf1de0hkgisdv" path="res://asset 9-11/bg biru.png" id="1_iu8sx"]
+[ext_resource type="Texture2D" uid="uid://d1jebnikoft8m" path="res://asset 9-11/food.png" id="2_kswym"]
+[ext_resource type="Texture2D" uid="uid://bdy6s7604yj3c" path="res://asset 9-11/button info.png" id="3_8k5dn"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_aaqx6")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(270.75, 481.5)
+scale = Vector2(1.39059, 1.13732)
+texture = ExtResource("1_iu8sx")
+
+[node name="makanan" type="Sprite2D" parent="."]
+position = Vector2(271, 428)
+scale = Vector2(1.13646, 1.1222)
+texture = ExtResource("2_kswym")
+
+[node name="info" type="TouchScreenButton" parent="."]
+
+[node name="info" type="Button" parent="info"]
+offset_left = 90.0
+offset_top = 682.0
+offset_right = 456.0
+offset_bottom = 838.0
+icon = ExtResource("3_8k5dn")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="info/info" to="." method="_on_info_pressed"]
