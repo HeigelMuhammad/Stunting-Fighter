@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjjtw0ojdq44l"
-path="res://.godot/imported/banner-1.png-762769e1dec9b8e6fddb9fcd057e65e0.ctex"
+uid="uid://7nb21fnbcbtq"
+path="res://.godot/imported/buttonlanjut.png-486cc41b3062ced3e776990daf35c009.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://6 bulan/halaman 1/banner-1.png"
-dest_files=["res://.godot/imported/banner-1.png-762769e1dec9b8e6fddb9fcd057e65e0.ctex"]
+source_file="res://9 - 11 bulan/buttonlanjut.png"
+dest_files=["res://.godot/imported/buttonlanjut.png-486cc41b3062ced3e776990daf35c009.ctex"]
 
 [params]
 

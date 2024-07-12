@@ -99,6 +99,7 @@ flat = true
 expand_icon = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
+shape_visible = false
 script = ExtResource("14_6ngpm")
 
 [node name="susu-p" type="Button" parent="TouchScreenButton6"]

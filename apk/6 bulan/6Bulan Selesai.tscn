@@ -1,17 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwpqt0p16wy6u"]
+[gd_scene load_steps=5 format=3 uid="uid://dwpqt0p16wy6u"]
 
 [ext_resource type="Texture2D" uid="uid://xyuo15fljeug" path="res://6 bulan/halaman 2/background.png" id="1_e5cjw"]
+[ext_resource type="Script" path="res://6 bulan/6Bulan Selesai.gd" id="1_o65d2"]
 [ext_resource type="Texture2D" uid="uid://dg4su534285w8" path="res://6 bulan/button-keluar.png" id="2_328vf"]
 [ext_resource type="Texture2D" uid="uid://boc8dyps2cq66" path="res://6 bulan/button-lanjut.png" id="3_rqbnx"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_o65d2")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(277, 486.5)
 scale = Vector2(1.41476, 1.14437)
 texture = ExtResource("1_e5cjw")
 
-[node name="Button" type="Button" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
 offset_left = 124.0
 offset_top = 509.0
 offset_right = 413.0
@@ -20,7 +28,7 @@ icon = ExtResource("2_328vf")
 flat = true
 expand_icon = true
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="Control"]
 offset_left = 127.0
 offset_top = 407.0
 offset_right = 425.0
@@ -28,3 +36,6 @@ offset_bottom = 512.0
 icon = ExtResource("3_rqbnx")
 flat = true
 expand_icon = true
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]

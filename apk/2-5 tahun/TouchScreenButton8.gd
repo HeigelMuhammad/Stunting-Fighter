@@ -12,4 +12,5 @@ func _process(delta):
 
 
 func _on_button_8_pressed():
+	get_tree().change_scene_to_file("res://scene/bissmillah_start.tscn")
 	pass # Replace with function body.
