@@ -12,7 +12,7 @@ func _process(delta):
 	pass
 
 func _on_touch_screenmulai_released():
-	get_tree().change_scene_to_file("res://6 bulan/6Bulan1.0.tscn")
+	get_tree().change_scene_to_file("res://scene/intro.tscn")
 	pass # Replace with function body.
 
 

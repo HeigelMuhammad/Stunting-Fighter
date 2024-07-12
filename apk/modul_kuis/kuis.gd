@@ -45,6 +45,7 @@ func _ready():
 		$"pil-2".icon = load(kuis[current_kuis].pil_2)
 		$"pil-3".icon =load( kuis[current_kuis].pil_3)
 	else:
+		
 		#ini tuntuk mengubah scene jika udah mentok atau selesai kuis haib
 		print("selesai")
 	pass
@@ -90,3 +91,8 @@ func _on_btnback_pressed():
 		get_tree().change_scene_to_file("res://modul_kuis/kuis.tscn")
 	pass 
 
+
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_file("res://scene/bissmillah_start.tscn")
+	pass # Replace with function body.

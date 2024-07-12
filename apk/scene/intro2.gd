@@ -13,5 +13,5 @@ func _process(delta):
 
 
 func _on_next_pressed():
-	get_tree().change_scene_to_file("res://scene/intro2.tscn")
+	get_tree().change_scene_to_file("res://6 bulan/6Bulan1.0.tscn")
 	pass # Replace with function body.

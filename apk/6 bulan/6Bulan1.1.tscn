@@ -39,10 +39,18 @@ position = Vector2(166, 713)
 scale = Vector2(0.97435, 1.04687)
 texture = ExtResource("3_015c6")
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control2"]
+shape_centered = false
+shape_visible = false
 script = ExtResource("5_b23fr")
 
-[node name="susu-pu" type="Button" parent="TouchScreenButton"]
+[node name="susu-pu" type="Button" parent="Control2/TouchScreenButton"]
 offset_left = 362.0
 offset_top = 453.0
 offset_right = 460.0
@@ -51,9 +59,9 @@ icon = ExtResource("9_gbig4")
 flat = true
 expand_icon = true
 
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Control2"]
 
-[node name="susu-bayi" type="Button" parent="TouchScreenButton2"]
+[node name="susu-bayi" type="Button" parent="Control2/TouchScreenButton2"]
 offset_left = 306.0
 offset_top = 442.0
 offset_right = 405.0
@@ -62,10 +70,10 @@ icon = ExtResource("8_y36xq")
 flat = true
 expand_icon = true
 
-[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="Control2"]
 script = ExtResource("8_t7vfu")
 
-[node name="yogurt" type="Button" parent="TouchScreenButton3"]
+[node name="yogurt" type="Button" parent="Control2/TouchScreenButton3"]
 offset_left = 56.2455
 offset_top = 485.0
 offset_right = 154.246
@@ -74,10 +82,10 @@ icon = ExtResource("7_ql1ko")
 flat = true
 expand_icon = true
 
-[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="Control2"]
 script = ExtResource("10_6gmgi")
 
-[node name="susu-c" type="Button" parent="TouchScreenButton4"]
+[node name="susu-c" type="Button" parent="Control2/TouchScreenButton4"]
 offset_left = 199.0
 offset_top = 469.0
 offset_right = 307.0
@@ -86,10 +94,10 @@ icon = ExtResource("6_itd2b")
 flat = true
 expand_icon = true
 
-[node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="Control2"]
 script = ExtResource("12_r87ei")
 
-[node name="susu-k" type="Button" parent="TouchScreenButton5"]
+[node name="susu-k" type="Button" parent="Control2/TouchScreenButton5"]
 offset_left = 221.0
 offset_top = 158.0
 offset_right = 308.0
@@ -98,11 +106,11 @@ icon = ExtResource("5_0a7h4")
 flat = true
 expand_icon = true
 
-[node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="Control2"]
 shape_visible = false
 script = ExtResource("14_6ngpm")
 
-[node name="susu-p" type="Button" parent="TouchScreenButton6"]
+[node name="susu-p" type="Button" parent="Control2/TouchScreenButton6"]
 offset_left = 157.0
 offset_top = 159.0
 offset_right = 242.0
@@ -159,12 +167,12 @@ icon = ExtResource("4_7avc3")
 flat = true
 expand_icon = true
 
-[connection signal="pressed" from="TouchScreenButton/susu-pu" to="." method="_on_susupu_pressed"]
-[connection signal="released" from="TouchScreenButton2" to="." method="_on_touch_screen_button_2_released"]
-[connection signal="pressed" from="TouchScreenButton2/susu-bayi" to="." method="_on_susubayi_pressed"]
-[connection signal="pressed" from="TouchScreenButton3/yogurt" to="." method="_on_yogurt_pressed"]
-[connection signal="pressed" from="TouchScreenButton4/susu-c" to="." method="_on_susuc_pressed"]
-[connection signal="pressed" from="TouchScreenButton5/susu-k" to="." method="_on_susuk_pressed"]
-[connection signal="pressed" from="TouchScreenButton6/susu-p" to="." method="_on_susup_pressed"]
+[connection signal="pressed" from="Control2/TouchScreenButton/susu-pu" to="." method="_on_susupu_pressed"]
+[connection signal="released" from="Control2/TouchScreenButton2" to="." method="_on_touch_screen_button_2_released"]
+[connection signal="pressed" from="Control2/TouchScreenButton2/susu-bayi" to="." method="_on_susubayi_pressed"]
+[connection signal="pressed" from="Control2/TouchScreenButton3/yogurt" to="." method="_on_yogurt_pressed"]
+[connection signal="pressed" from="Control2/TouchScreenButton4/susu-c" to="." method="_on_susuc_pressed"]
+[connection signal="pressed" from="Control2/TouchScreenButton5/susu-k" to="." method="_on_susuk_pressed"]
+[connection signal="pressed" from="Control2/TouchScreenButton6/susu-p" to="." method="_on_susup_pressed"]
 [connection signal="pressed" from="Control/TouchScreenButton7/replay" to="Control/TouchScreenButton7" method="_on_lanjut_pressed"]
 [connection signal="pressed" from="Control/TouchScreenButton7/lanjut" to="." method="_on_button_2_pressed"]

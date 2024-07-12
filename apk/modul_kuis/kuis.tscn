@@ -71,8 +71,11 @@ anchor_mode = 0
 
 [node name="checklist" type="Node" parent="."]
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="pressed" from="btn-back" to="." method="_on_btnback_pressed"]
 [connection signal="pressed" from="btn-home" to="." method="_on_btnhome_pressed"]
 [connection signal="pressed" from="pil-1" to="." method="_on_pil_1_pressed"]
 [connection signal="pressed" from="pil-2" to="." method="_on_pil_2_pressed"]
 [connection signal="pressed" from="pil-3" to="." method="_on_pil_3_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
